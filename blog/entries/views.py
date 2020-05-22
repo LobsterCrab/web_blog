@@ -21,4 +21,6 @@ class CreateEntryView(LoginRequiredMixin,CreateView):
 
     def form_valid(self,form):
         form.instance.entry_author = self.request.user
+        print(form.instance.entry_author)
+        print("well this bullshit worked i guess")
         return super().form_valid(form)
